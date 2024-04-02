@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch03_kernel">
+<title>嵌入式Linux开发构成之kernel</title>
+<abstract></abstract>
+
+<para>嵌入式系统，免费开源的，用的比较广泛的，就属linux</para>
+<para></para>
+
+<sect1 xml:id="emb_linux_complie"><title>嵌入式Linux的基本编译的过程</title>
+    <para></para>
+    <itemizedlist>
+        <listitem>先配置好，比如设置ARCH=arm等环境变量</listitem>
+        <listitem>make menuconfig</listitem>
+        <listitem>make uImage</listitem>
+    </itemizedlist>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="uimage_vs_zimage"><title>生成的uImage和zImage等的区别</title>
+    <para>如何加参数配置，以生成uImage或zImage</para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="kernel_size_optimize"><title>如何优化以减小kernel的size</title>
+    <para>去除不必要的模块等</para>
+</sect1>
+
+</chapter>

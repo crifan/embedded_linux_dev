@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch01_intro">
+<title>嵌入式Linux开发构成之简介</title>
+<abstract></abstract>
+
+<para>此处简单介绍一下嵌入式Linux开发的基本知识。</para>
+<para>嵌入式Linux开发的基本流程，其实之前在：</para>
+<para><link xl:href="http://www.crifan.com/files/doc/docbook/embedded_soft_dev/release/html/embedded_soft_dev.html#emb_linux_compostion">嵌入式Linux开发环境组成</link></para>
+<para>有了一些简单的介绍了。此处更加详细的解释一下，关于嵌入式Linux开发的方方面面。</para>
+<para>典型的嵌入式Linux的开发，其最基本的流程是：</para>
+<orderedlist>
+    <listitem>搭建嵌入式开发环境：制作和配置交叉编译器环境
+        <para>搭建环境，保证有交叉编译器可以使用，用于后续交叉编译。</para>
+        <para></para>
+        <para></para>
+    </listitem>
+    <listitem>移植Bootloader：最典型的就是Uboot
+        <para>移植uboot</para>
+        <para>修改更新uboot，在其中添加对应的功能支持，修复bug等等。</para>
+        <para>比如，修改其中的cmd_nand.c去添加新的其他nand flash方面的功能的支持等等。</para>
+        <para></para>
+        <para></para>
+    </listitem>
+    <listitem>移植Linux的内核kernel
+        <para>移植，裁剪Linux kernel，之后再去交叉编译出所需要的uImage等系统镜像文件</para>
+        <para>编译内核期间，最常用的命令就是：</para>
+        <screen>
+<![CDATA[
+make menuconfig
+make uImage
+]]>
+        </screen>
+        <para>关于make menuconfig，不了解的可以参考：<link xl:href="http://www.crifan.com/tutorial_what_is_menuconfig_and_normal_usage/">【教程】什么是menuconfig和menuconfig的使用方法和技巧</link></para>
+        <para></para>
+    </listitem>
+    <listitem>制作自己的根文件系统系统
+        <para>需要注意的是，此处所说的制作文件系统，分两大步骤：</para>
+        <itemizedlist>
+            <listitem>用工具制作出最基本的文件系统的文件内容
+                <para>比如用<link xl:href="http://www.crifan.com/files/doc/docbook/buildroot_intro/release/html/buildroot_intro.html">Buildroot</link>、<link xl:href="http://www.crifan.com/files/doc/docbook/crosstool_ng/release/html/crosstool_ng.html">Crosstool-NG</link>或者其他工具，制作出自己的基本的文件系统的文件内容</para>
+                <para></para>
+            </listitem>
+            <listitem>用对应文件系统制作工具制作出文件系统镜像
+                <para>再用专门的文件系统制作工具，去基于之前的文件系统的所有的文件内容，制作成对应的镜像文件。</para>
+                <para>比如用Yaffs2的工具制作出Yaffs2的文件系统镜像文件</para>
+                <para></para>
+                <para></para>
+            </listitem>
+        </itemizedlist>
+        <para>根据自己所选择的根文件系统的类型不同，选择对应的不同的工具去制作对应的根文件系统。</para>
+        <para>典型的嵌入式中，存储设备往往都是用的Nand Flash，所以对应的文件系统的类型也是MTD类型的某个日志型的文件系统，比如：</para>
+        <itemizedlist>
+            <listitem>Yaffs2
+                <para>用特定的工具去制作makeyaffs2image去制作yaffs2的文件系统镜像文件，其中内部制作过程涉及到，把Yaffs2的文件系统本身相关的一些数据，制作出来，放到一个page的oob的位置，</para>
+                <para>待后续写入此文件系统镜像文件期间，oob数据写入到对应的物理上的page的oob的位置，这样Yaffs2文件系统运行起来之后，就可以在oob的位置读取到对应的信息，可以正确的管理此文件系统了。</para>
+                <para></para>
+                <para>制作出来的文件系统镜像文件的名字，一般都是类似于：</para>
+                <para>TOOD：确认文件名是不是rootfs.arm.yaffs2？？？</para>
+                <para></para>
+                <para>TODO：把yaffs2_makeyaffs2image_support_2k_4k_8k.7z上传到自己的网站后，把链接贴到此处</para>
+            </listitem>
+            <listitem>Jffs
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>UBIFS
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+        </itemizedlist>
+        <para></para>
+        <para></para>
+    </listitem>
+</orderedlist>
+<para>TODO：抽空确认下面文件的名字是否正确！！！</para>
+<para>有了对应的这些文件：</para>
+<itemizedlist>
+    <listitem>uboot文件：u-boot.bin</listitem>
+    <listitem>kernel文件：uImage</listitem>
+    <listitem>rootfs文件：rootfs.arm.yaffs2</listitem>
+</itemizedlist>
+<para>然后再去用烧录工具去将这些文件，烧录到目标开发板中，</para>
+<para>然后再去用串口工具连接开发板，进行调试</para>
+<para>调试Uboot是否正常运行，调试Linux内核是否工作正常等等。</para>
+<para></para>
+<para>如此，才是一个基本的，完整的嵌入式Linux开发流程。</para>
+<para>此外，对于烧录过程，可以参考：<link xl:href="http://www.crifan.com/files/doc/docbook/firmware_download/release/html/firmware_download.html">【详解】嵌入式开发中固件的烧录方式</link></para>
+<para></para>
+
+</chapter>

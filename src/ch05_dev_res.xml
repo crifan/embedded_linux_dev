@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch05_dev_res">
+<title>嵌入式Linux开发相关资源</title>
+<abstract></abstract>
+
+<sect1 xml:id="linux_drv_websites"><title>嵌入式Linux开发网站</title>
+    <sect2 xml:id="elinux_org"><title>Embedded Linux Wiki</title>
+        <para><link xl:href="http://elinux.org/Main_Page">Embedded Linux Wiki</link>这个网站，可以简单解释成为，嵌入式Linux开发的资源大全</para>
+        <para>其中包含了很多方面的内容，比如：</para>
+        <itemizedlist>
+            <listitem>Android
+                <para><link xl:href="http://elinux.org/Android_Tools">Android Tools - eLinux.org</link></para>
+                <para>整理了Android开发所用到的工具。</para>
+                <para></para>
+            </listitem>
+        </itemizedlist>
+        <para></para>
+    </sect2>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="online_linux_source_code"><title>Linux源代码在线查看</title>
+    <para>在折腾Linux开发期间，往往会涉及到查阅Linux源代码。</para>
+    <para>传统的方式是，使用好用的工具，比如Source Insight去查看Linux源代码。</para>
+    <para>如果没有Source Insight的话，且方便上网，则可以借用在线的Linux源代码查阅网站去看代码。</para>
+    <itemizedlist>
+        <listitem><link xl:href="http://lxr.free-electrons.com/source/drivers/mtd/tests/mtd_stresstest.c?v=3.7">经典的LXR</link></listitem>
+        <listitem>这里的代码高亮效果也不错：<link xl:href="http://kerneldox.com/kdox-linux/d5/d72/mtd__stresstest_8c_source.html" /></listitem>
+    </itemizedlist>
+    <para></para>
+</sect1>
+
+
+</chapter>

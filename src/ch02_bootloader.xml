@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch02_bootloader">
+<title>嵌入式Linux开发构成之bootloader</title>
+<abstract></abstract>
+
+<para>之前有很多bootloader，不过现在用的最多的就是uboot。</para>
+<para>主要介绍的内容有：</para>
+
+<sect1 xml:id="uboot_ver_history"><title>Uboot版本演化历史</title>
+    <para>目前最常用的哪几个版本：</para>
+    <itemizedlist>
+        <listitem>u-boot.1.1.6</listitem>
+        <listitem>uboot 2012之类的</listitem>
+    </itemizedlist>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="uboot_code_arch"><title>Uboot的代码逻辑和框架</title>
+    <itemizedlist>
+        <listitem>arch，支持的平台</listitem>
+        <listitem>cpu类型</listitem>
+        <listitem>支持哪些外设，代码架构如何</listitem>
+    </itemizedlist>
+    <para></para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="uboot_utilization"><title>Uboot基本的使用方式</title>
+    <itemizedlist>
+        <listitem>烧录到目标开发板中后</listitem>
+        <listitem>启动系统之前按某个键，或任意键</listitem>
+        <listitem>然后输入命令，使用uboot</listitem>
+    </itemizedlist>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="uboot_commands"><title>Uboot常见的命令</title>
+    <itemizedlist>
+        <listitem>nand write/read</listitem>
+        <listitem>md</listitem>
+        <listitem>setenv</listitem>
+        <listitem>cp</listitem>
+        <listitem>等等</listitem>
+    </itemizedlist>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="uboot_compile"><title>Uboot的编译</title>
+    <para>包括基本的编译命令：</para>
+    <screen>make XXXX_config</screen>
+    <para></para>
+    <para>另外，把之前自己对，uboot编译最后阶段的命令的详细解释，也（引用）过来：</para>
+    <para><link xl:href="http://www.crifan.com/detailed_analysis_of_the_make_uboot_final_compile_and_link_the_implementation_process/">详细分析make uboot 最后的编译链接的具体执行过程</link></para>
+</sect1>
+
+<sect1 xml:id="uboot_env_storage"><title>Uboot环境变量存储机制</title>
+    <itemizedlist>
+        <listitem>环境变量env</listitem>
+        <listitem>存在多种可能的介质中：比如nand flash，nor flash等等</listitem>
+    </itemizedlist>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="uboot_porting"><title>Uboot的移植</title>
+    <para>以及如果要移植，大概的逻辑，和参考资料。</para>
+    <para>找到值得参考的，关于uboot移植的资料</para>
+    <para></para>
+</sect1>
+
+</chapter>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<bibliography
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="reference">
+<bibliomixed id="ref.emb_dev_bootloader">
+  <bibliosource><ulink url="http://www.crifan.com/embedded_development_bootloader/">嵌入式开发之bootloader | 在路上</ulink></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed id="ref.emb_dev_kernel">
+  <bibliosource><link xl:href="http://www.crifan.com/embedded_development_kernel/">嵌入式开发之kernel | 在路上</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed id="ref.emb_dev_rootfs">
+  <bibliosource><link xl:href="http://www.crifan.com/embedded_development_rootfs/">嵌入式开发之rootfs | 在路上</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+<bibliomixed id="ref.runtime_upgrade_linux">
+  <bibliosource><link xl:href="http://www.crifan.com/files/doc/docbook/runtime_upgrade_linux/release/html/runtime_upgrade_linux.html">在Linux运行期间升级Linux系统（Uboot+kernel+Rootfs）</link></bibliosource>
+  <author>Crifan Li</author>
+</bibliomixed>
+
+</bibliography>

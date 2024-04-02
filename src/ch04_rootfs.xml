@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:svg="http://www.w3.org/2000/svg"
+
+    xml:id="ch04_rootfs">
+<title>嵌入式Linux开发构成之rootfs</title>
+<abstract></abstract>
+
+<sect1 xml:id="what_is_rootfs"><title>什么是rootfs</title>
+    <para></para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="why_need_rootfs"><title>为何要rootfs</title>
+    <para></para>
+    <para></para>
+</sect1>
+
+<sect1 xml:id="rootfs_type"><title>rootfs的类型</title>
+    <para>常见的，针对于嵌入式系统中常见的存储设备Nand Flash的rootfs，有：</para>
+    <itemizedlist>
+        <listitem>cramfs</listitem>
+        <listitem>JFFS2</listitem>
+        <listitem>YAFFS2</listitem>
+        <listitem>UBIFS</listitem>
+    </itemizedlist>
+</sect1>
+
+<sect1 xml:id="how_generate_rootfs"><title>如何制作和生成rootfs</title>
+    <para>支持yaff的4k和8k的那个脚本</para>
+</sect1>
+
+<sect1 xml:id="how_edit_rootfs"><title>如何修改和编辑rootfs</title>
+    <para>嵌入式中如何增加启动项</para>
+</sect1>
+
+<sect1 xml:id="how_mout_rootfs"><title>rootfs的加载方式</title>
+    <itemizedlist>
+        <listitem>NFS挂在</listitem>
+        <listitem>直接挂载到块设备中，比如/mtd/block2之类的</listitem>
+    </itemizedlist>
+    <para></para>
+    <para>然后就衍生出一个问题：如何在线升级rootfs，详见：</para>
+    <para><link xl:href="http://www.crifan.com/files/doc/docbook/runtime_upgrade_linux/release/html/runtime_upgrade_linux.html">在Linux运行期间升级Linux系统（Uboot+kernel+Rootfs）</link></para>
+</sect1>
+
+</chapter>
